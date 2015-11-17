@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!-- Show Content -->
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">	
+		<title>Show Content</title>
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles.css">
+		
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Site Name</h1>
+
+		</header> 
+
+		<div class="wrapper">
+
+			<div class="container">
+
+				<h2>Heading</h2>
+
+				<button class="show">Open</button>
+				
+				<div class="overlay">
+					
+					<div>
+
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					
+
+					<button class="hide">Close</button>
+
+					</div> <!-- .container-->
+
+				</div>
+
+		</div> <!-- .wrapper-->
+
+		<footer>
+
+			<small>Powered by <a href="http://github.com">Github</small>
+
+		</footer> 
+
+
+
+<script src="jquery-2.1.4.min.js"></script>
+	
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function (){
+
+			var open = document.querySelector('.show'),
+			close = document.querySelector('.hide'),
+			modal = document.querySelector('.overlay'),
+			body = document.querySelector('body'),
+			top = body.scrollTop;
+			
+			modal.classList.add("accessibly-hidden");
+
+			close.addEventListener("click",  function(){
+				
+				modal.classList.add("accessibly-hidden");
+			
+			});
+	
+				open.addEventListener("click",  function(){
+				modal.classList.remove("accessibly-hidden");
+				modal.style.top = top + 'px';
+
+			});
+	});
+
+	
+	</script>
+
+	</body>
+
+</html>
